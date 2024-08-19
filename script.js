@@ -14,12 +14,12 @@ let searchValue;
 
 // Event when currency is changed
 fromCurrecy.addEventListener('change', (event) => {
-    resultFrom = ${event.target.value};
+    resultFrom = `${event.target.value}`;
 });
 
 // Event when currency is changed
 toCurrecy.addEventListener('change', (event) => {
-    resultTo = ${event.target.value};
+    resultTo = `${event.target.value}`;
 });
 
 search.addEventListener('input', updateValue);
@@ -34,7 +34,7 @@ convert.addEventListener("click", getResults);
 
 // Function getresults
 function getResults() {
-    fetch(${api})
+    fetch(`${api}`)
         .then(currency => {
             return currency.json();
         }).then(displayResults);
